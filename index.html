@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    
+  </head>
+  <body>
+    <div id="firebaseui-auth-container">
+      <!-- This is where the Login ui will load -->
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <title>قائمة طلبات الصيانة</title>
+    <!-- Bootstrap CSS -->
+   
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">قائمة طلبات الصيانة</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+           <!--<th>ID</th>--> 
+            <th name="block_n"></th>
+            <th name="req_repair">بيان الطلب</th>
+            <th name="breq_desc">بيان الصيانة</th>
+            <th name="unit_n">رقم الوحدة</td>
+            <th name="req_date">التاريخ</td>
+            <th name="etc">ملاحظات</td>
+            <th name="add">اجراءات</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Your Firestore data goes here -->
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script src="js/list.js"></script>
+
+    <!--
+    <script>
+       // Add click event listeners to the edit and delete buttons
+  $('.edit-btn').click(function() {
+    var id = $(this).data('id');
+    // Redirect to the edit page with the document ID in the URL
+    window.location.href = 'edit.html?id=' + id;
+  });
+
+  $('.delete-btn').click(function() {
+    var id = $(this).data('id');
+    // Delete the document from Firestore
+    tableRef.doc(id).delete().then(function() {
+      console.log('Document successfully deleted!');
+    }).catch(function(error) {
+      console.error('Error removing document: ', error);
+    });
+  });
+    </script>
+-->
+  </body>
+</html>
