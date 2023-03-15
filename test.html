@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Block Number</th>
+              <th>Repair Required</th>
+              <th>Description</th>
+              <th>ETC</th>
+              <th>Request Date</th>
+              <th>Unit Number</th>
+              <th>Warranty Expiration</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Modal for editing documents -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Edit Document</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="editForm">
+                <div class="mb-3">
+                  <label for="block_n" class="form-label">Block Number</label>
+                  <input type="text" class="form-control" id="edit_block_n" required>
+                </div>
+                <div class="mb-3">
+                  <label for="req_repair" class="form-label">Repair Required</label>
+                  <input type="text" class="form-control" id="edit_req_repair" required>
+                </div>
+                <div class="mb-3">
+                  <label for="req_desc" class="form-label">Description</label>
+                  <input type="text" class="form-control" id="edit_req_desc" required>
+                </div>
+                <div class="mb-3">
+                  <label for="etc" class="form-label">ETC</label>
+                  <input type="text" class="form-control" id="edit_etc" required>
+                </div>
+                <div class="mb-3">
+                  <label for="req_date" class="form-label">Request Date</label>
+                  <input type="date" class="form-control" id="edit_req_date" required>
+                </div>
+                <div class="mb-3">
+                  <label for="unit_n" class="form-label">Unit Number</label>
+                  <input type="text" class="form-control" id="edit_unit_n" required>
+                </div>
+                <div class="mb-3">
+                  <label for="warranty_exp" class="form-label">Warranty Expiration</label>
+                  <input type="date" class="form-control" id="edit_warranty_exp" required>
+                </div>
+                <input type="hidden" id="edit_doc_id">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" id="editBtn">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+      
+</body>
+</html>

@@ -1,7 +1,5 @@
 
-      const db = firebase.firestore();
-
-      // Get data from Firestore
+      // Get data from Firestore (ok)
       db.collection('repair').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           // Add data to table
